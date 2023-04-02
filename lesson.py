@@ -1,0 +1,1 @@
+class Point_2d
