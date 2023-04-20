@@ -1,6 +1,6 @@
 class Point2D:
 
-    def __init__(self, x: float, y: float):
+    def __init__(self, x: float = 0, y: float = 0):
         self._x = x
         self._y = y
 
@@ -24,4 +24,10 @@ class Point2D:
         self._y = y
 
     def to_str(self) -> str:
-        return f"Point2D [x = {self._x}, y = {self._y}]"
+        return f"Point2D x = {self._x}, y = {self._y}"
+
+    def __add__(self, val2D):
+        c = Point2D()
+        c.x = val2D.get_x() + self._x
+        c.y = val2D.get_y() + self._y
+        return c
